@@ -5,27 +5,27 @@ import Navbar from "./Navbar.astro";
 import Footer from "./Footer.astro";
 
 interface Props {
-    title?: string;
-    description?: string;
+  title?: string;
+  description?: string;
 }
 
 const {
-    title = "GouGo AI",
-    description = "Obtén respuestas instantáneas, encuentra, aprende sobre la data más confiable: tus propios datos operativos."
+  title = "GouGo AI",
+  description = "Obtén respuestas instantáneas, encuentra, aprende sobre la data más confiable: tus propios datos operativos.",
 } = Astro.props;
 ---
 
 <html lang="es">
-<Head title={title} description={description}/>
-<body class="antialiased">
-<div class="container mx-auto flex flex-col">
-    <Navbar/>
+  <Head title={title} description={description} />
+  <body class="font-[poppins] antialiased">
+    <div class="flex flex-col">
+      <Navbar />
 
-    <main>
-        <slot/>
-    </main>
+      <main>
+        <slot />
+      </main>
 
-    <Footer/>
-</div>
-</body>
+      <Footer />
+    </div>
+  </body>
 </html>

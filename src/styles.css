@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .bg-gradient-radial-cover {
+    background-image: radial-gradient(
+      28.000000000000004% 44% at 50% 50%,
+      #1890ff 0%,
+      rgb(0, 51, 160) 100%
+    );
+  }
+
+  .bg-gradient-radial-footer {
+    background-image: radial-gradient(
+      23% 75% at 50% 50%,
+      #1890ff 0%,
+      rgb(0, 51, 160) 100%
+    );
+  }
+}

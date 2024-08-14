@@ -1,0 +1,92 @@
+---
+import {Picture} from "astro:assets";
+import logo from "../assets/gougoai.png";
+import webclient from "../assets/webclient.png";
+import client1 from "../assets/laredonda.png";
+import client2 from "../assets/casio.png";
+import client3 from "../assets/hersheys.png";
+import client4 from "../assets/onelatam.png";
+import client5 from "../assets/caffegardello.png";
+---
+
+<div class="bg-gradient-radial-cover">
+    <div class="container mx-auto px-4 py-14 overflow-clip flex flex-col gap-y-5 md:pt-28 xl:px-6">
+        <div class="flex flex-col gap-y-5 md:flex-row">
+            <div class="flex flex-col gap-y-5 md:gap-y-6 md:basis-1/2 xl:basis-5/12">
+                <!-- logo -->
+                <Picture src={logo}
+                         width="190"
+                         formats={["avif", "webp"]}
+                         alt="Gougo AI"
+                         pictureAttributes={{class: "self-center md:place-self-auto"}}/>
+
+                <!-- slogan -->
+                <p class="text-6xl text-white text-center font-semibold md:text-left xl:text-7xl">
+                    Pide, Recibe y Actúa.
+                </p>
+
+                <!-- description -->
+                <p class="text-xl text-white text-center md:text-left xl:text-3xl">
+                    GouGo AI es el asistente de inteligencia Artificial del retail.
+                </p>
+
+                <!-- cta -->
+                <a href="/#contact"
+                   class="flex flex-row p-2.5 rounded-[50px] mx-auto bg-orange-600 justify-center items-center content-center min-w-40 min-h-12 text-sm text-white text-center font-semibold hover:bg-orange-800 hover:scale-105 transition duration-200 ease-in-out md:mx-0 md:me-auto xl:min-w-64 xl:min-h-20 xl:text-xl">
+                    Quiero saber más
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-5 md:basis-1/2 xl:basis-7/12">
+                <!-- webclient -->
+                <Picture
+                        src={webclient}
+                        formats={["avif", "webp"]}
+                        widths={[640, 768, 1024, webclient.width]}
+                        sizes={`(max-width: 768px) 640px, (max-width: 1024px) 768px, (max-width: 1280px) 1024px, ${webclient.width}px`}
+                        alt="Cliente Web"
+                        pictureAttributes={{class: "self-center"}}
+                />
+            </div>
+        </div>
+
+        <!-- clients -->
+        <div class="flex flex-col gap-5 xl:flex-row">
+            <p class="text-xl text-white text-center md:basis-3/12">
+                Ya están analizando su data en segundos
+            </p>
+
+            <div class="grid grid-cols-2 gap-x-4 gap-y-5 justify-items-center md:grid-cols-5 md:basis-9/12">
+                <div>
+                    <Picture src={client1}
+                             formats={["avif", "webp"]}
+                             alt="Viñedos La Redonda"/>
+                </div>
+
+                <div>
+                    <Picture src={client2}
+                             formats={["avif", "webp"]}
+                             alt="Casio"/>
+                </div>
+
+                <div>
+                    <Picture src={client3}
+                             formats={["avif", "webp"]}
+                             alt="Hershey's"/>
+                </div>
+
+                <div>
+                    <Picture src={client4}
+                             formats={["avif", "webp"]}
+                             alt="onelatam"/>
+                </div>
+
+                <div class="col-span-2 md:col-span-1">
+                    <Picture src={client5}
+                             formats={["avif", "webp"]}
+                             alt="onelatam"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
