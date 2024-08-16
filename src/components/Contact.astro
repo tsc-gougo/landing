@@ -1,7 +1,22 @@
 ---
-
+import { Picture } from "astro:assets";
+import seller from "../assets/seller.png";
+import ContactForm from "./ContactForm";
 ---
 
-<div id="contact" class="min-h-svh">
-  <div class="container mx-auto">Contact</div>
+<div id="contact" class="flex flex-col">
+  <div class="container mx-auto px-4 pt-7 pb-14 flex flex-col gap-y-5 xl:px-6">
+    <div class="flex flex-col gap-5 md:flex-row">
+      <!-- form -->
+      <ContactForm client:visible />
+
+      <!-- seller -->
+      <Picture
+        src={seller}
+        formats={["avif", "webp"]}
+        alt="Vendedor"
+        pictureAttributes={{ class: "self-center md:order-first" }}
+      />
+    </div>
+  </div>
 </div>
