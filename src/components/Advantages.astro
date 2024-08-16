@@ -1,7 +1,116 @@
 ---
-
+import { Picture } from "astro:assets";
+import banner from "../assets/banner.png";
+import phone from "../assets/phone.png";
 ---
 
-<div class="min-h-svh">
-  <div class="container mx-auto">Advantages</div>
+<div id="advantages" class="flex flex-col bg-sky-50">
+  <div class="container mx-auto px-4 py-14 flex flex-col gap-y-5 xl:px-6">
+    <!-- banner -->
+    <a href="/#video" class="flex flex-col">
+      <Picture
+        src={banner}
+        formats={["avif", "webp"]}
+        alt="IA especializado"
+        pictureAttributes={{ class: "self-center max-w-sm md:max-w-full" }}
+      />
+    </a>
+
+    <!-- advantages -->
+    <div
+      class="grid grid-cols-1 auto-rows-fr gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <!-- advantage 1 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto justify-center p-9 gap-y-5 rounded-3xl bg-white shadow-sm"
+      >
+        <div class="flex flex-col">
+          <p class="text-7xl text-center text-blue-800 font-bold">+5%</p>
+          <p class="text-3xl text-center text-blue-800 font-bold">en ventas</p>
+        </div>
+
+        <p class="text-lg text-center xl:text-2xl">
+          Maximiza la visibilidad y disponibilidad de productos para impulsar
+          ventas.
+        </p>
+      </div>
+
+      <!-- advantage 2 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto justify-center p-9 gap-y-5 rounded-3xl bg-white shadow-sm"
+      >
+        <div class="flex flex-col">
+          <p class="text-7xl text-center text-blue-800 font-bold">30%</p>
+          <p class="text-3xl text-center text-blue-800 font-bold">
+            +productivo
+          </p>
+        </div>
+
+        <p class="text-lg text-center xl:text-2xl">
+          Optimiza operaciones con análisis estadísticos y tareas automatizadas.
+        </p>
+      </div>
+
+      <!-- advantage 3 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto justify-center p-9 gap-y-5 rounded-3xl bg-white shadow-sm"
+      >
+        <div class="flex flex-col">
+          <p class="text-7xl text-center text-blue-800 font-bold">+10x</p>
+          <p class="text-3xl text-center text-blue-800 font-bold">+ROI</p>
+        </div>
+
+        <p class="text-lg text-center xl:text-2xl">
+          Estrategias alineadas para maximizar tu retorno de inversión.
+        </p>
+      </div>
+
+      <!-- advantage 4 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto px-4 gap-y-5 justify-end rounded-3xl bg-white shadow-sm"
+      >
+        <Picture
+          src={phone}
+          formats={["avif", "webp"]}
+          alt="GouGo AI example"
+        />
+      </div>
+
+      <!-- advantage 5 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto justify-center p-9 gap-y-5 rounded-3xl bg-white shadow-sm"
+      >
+        <div class="flex flex-col">
+          <p class="text-4xl text-center text-blue-800 font-bold">
+            Decisiones estratégicas
+          </p>
+        </div>
+
+        <p class="text-lg text-center xl:text-2xl">
+          Comparativas efectivas para acciones rápidas y acertadas.
+        </p>
+      </div>
+
+      <!-- advantage 6 -->
+      <div
+        class="flex flex-col max-w-sm mx-auto justify-center p-9 gap-y-5 rounded-3xl bg-white shadow-sm"
+      >
+        <div class="flex flex-col">
+          <p class="text-4xl text-center text-blue-800 font-bold">
+            Insights<br />claros
+          </p>
+        </div>
+
+        <p class="text-lg text-center xl:text-2xl">
+          Datos complejos convertidos en conocimiento, de forma simple y
+          oportuna.
+        </p>
+      </div>
+    </div>
+
+    <!-- cta -->
+    <a href="/#contact" class="flex flex-row btn-primary mx-auto">
+      Solicitar un demo
+    </a>
+  </div>
 </div>
