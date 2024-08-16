@@ -1,50 +1,38 @@
-# Astro Starter Kit: Minimal
+# GouGo AI - Landing
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Con la finalidad de que pueda dar mantenimiento a la landing se comparte a continuación guía técnica sobre el
+desarrollo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Tecnología
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Para el desarrollo se utilizó [Astro](https://docs.astro.build/en/getting-started/)
+con [Tailwind](https://tailwindcss.com/docs/installation) y [React](https://react.dev/reference/react).
 
-## 🚀 Project Structure
+## Requisitos
 
-Inside of your Astro project, you'll see the following folders and files:
+Para poder utilizar es necesario contar en la maquina de desarrollo cuente con:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- [Node](https://nodejs.org/) v22.4+.
+- Editor de código como [VSCode](https://code.visualstudio.com/), configurado
+  para [Astro](https://docs.astro.build/en/editor-setup/).
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file
-name.
+## Comandos importantes
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact
-components.
+Todos los comandos que se pueden ejecutar en la terminal puede ser vistos en el archivo "package.json". Sin embargo se
+listan los más importantes a continuación:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Commando           | Acción                                                                       |
+|:-------------------|:-----------------------------------------------------------------------------|
+| `npm install`      | Instalar toads las dependencias                                              |
+| `npm run dev`      | Inicia un servidor local para desarrollo con Hotreload en `localhost:4321`   |
+| `npm run build`    | Compila la solución para publicar a producción en `./dist/`                  |
+| `npm run preview`  | Corre la solución en local para ver como correría en producción.             |
+| `npm run eslint`   | Valida el código para ver que no exista errores de javascript.               |
+| `npm run prettier` | Formatea el código para que tenga consistencia y siguiendo buenas prácticas. |
 
-## 🧞 Commands
+## Notas
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into
-our [Discord server](https://astro.build/chat).
+- Este desarrollo está pensado para correr en la raíz del dominio (https://somedomain.com), es decir, que no correrá
+  bien en una subcarpeta (https://somedomain.com/subfolder).
+- Si se cambia el URL del API el mismo debe ser modificado en el archivo "./src/components/ContactForm.jsx". Y en el
+  mismo buscar la variable apiEndpoint y actualizar.
