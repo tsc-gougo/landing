@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { Input, RadioGroup, Radio, Checkbox } from "@nextui-org/react";
 
-const apiEndpoint = "https://gougo-ai-api.tsc-dev.xyz/api/contact";
+const apiEndpoint = "https://gougoai-web-api.azurewebsites.net/api/contact";
 
 const initialValues = {
   name: "",
