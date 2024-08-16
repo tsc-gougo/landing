@@ -1,0 +1,82 @@
+---
+import { Picture } from "astro:assets";
+import computers from "../assets/computers.png";
+import microphone from "../assets/microphone.png";
+---
+
+<div id="voice" class="flex flex-col">
+  <div class="container mx-auto px-4 py-14 flex flex-col gap-y-5 xl:px-6">
+    <div class="flex flex-col gap-y-5 md:flex-row">
+      <div
+        class="flex flex-col gap-y-5 justify-center md:gap-y-6 md:basis-1/2 xl:basis-5/12"
+      >
+        <!-- info -->
+        <p class="text-xl text-center md:text-left xl:text-3xl">
+          Transforma tu <strong class="font-semibold">negocio retail</strong> con
+          nuestro asistente especializado.
+        </p>
+
+        <p class="text-xl text-center md:text-left xl:text-3xl">
+          La primera plataforma de IA en LATAM,
+          <strong class="font-semibold">
+            diseñada para entender y anticipar las necesidades de tu estrategia
+            en el PDV.
+          </strong>
+        </p>
+
+        <!-- computers -->
+        <Picture
+          src={computers}
+          formats={["avif", "webp"]}
+          alt="Hey GouguGo AI"
+          pictureAttributes={{ class: "self-center md:hidden" }}
+        />
+
+        <!-- cta -->
+        <a
+          href="/#contact"
+          class="flex flex-row btn-primary mx-auto md:mx-0 md:me-auto"
+        >
+          Habla con un consultor
+        </a>
+      </div>
+
+      <div
+        class="hidden flex-col gap-y-5 justify-center md:basis-1/2 xl:basis-7/12 md:flex"
+      >
+        <!-- computers -->
+        <Picture
+          src={computers}
+          formats={["avif", "webp"]}
+          alt="Hey GouguGo AI"
+          pictureAttributes={{ class: "self-center" }}
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col px-4 py-9 gap-y-5 bg-sky-500 bg-[url('/imgs/waves.png')] bg-no-repeat bg-center bg-cover xl:px-6"
+  >
+    <!-- instructions -->
+    <div class="flex flex-col xl:gap-y-3">
+      <p class="text-lg text-white text-center xl:text-3xl">
+        ¡Pídeselo a Gougo
+      </p>
+
+      <p class="text-xl text-white text-center font-bold xl:text-5xl">
+        Hablándole o escribiéndole!
+      </p>
+    </div>
+
+    <!-- mic -->
+    <Picture
+      src={microphone}
+      formats={["avif", "webp"]}
+      widths={[48, microphone.width]}
+      sizes={`(max-width: 768px) 56px, ${microphone.width}px`}
+      alt="Micrófono"
+      pictureAttributes={{ class: "max-w-14 self-center md:max-w-20" }}
+    />
+  </div>
+</div>

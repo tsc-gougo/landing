@@ -1,0 +1,77 @@
+---
+import { Picture } from "astro:assets";
+import logos from "../assets/footer_logos.png";
+import chat from "../assets/icon-chat.png";
+import fb from "../assets/icon-fb.png";
+import linkedin from "../assets/icon-link.png";
+import instagram from "../assets/icon-ig.png";
+---
+
+<div class="flex flex-col bg-gradient-radial-footer">
+  <div class="container mx-auto px-4 py-14 flex flex-col gap-y-5 xl:px-6">
+    <!-- logos -->
+    <a href="https://neaxis.mx/" target="_blank" class="flex flex-col">
+      <Picture
+        src={logos}
+        formats={["avif", "webp"]}
+        alt="Powered by Neaxis"
+        pictureAttributes={{ class: "self-center max-w-sm" }}
+      />
+    </a>
+
+    <!-- links -->
+    <div class="flex flex-row gap-x-5 justify-center">
+      <!-- contact -->
+      <a href="/#contact" class="flex flex-col">
+        <Picture
+          src={chat}
+          formats={["avif", "webp"]}
+          alt="Contáctanos"
+          pictureAttributes={{ class: "max-w-12" }}
+        />
+      </a>
+
+      <!-- facebook -->
+      <a
+        href="https://www.facebook.com/neaxis.mx"
+        target="_blank"
+        class="flex flex-col"
+      >
+        <Picture
+          src={fb}
+          formats={["avif", "webp"]}
+          alt="Facebook"
+          pictureAttributes={{ class: "max-w-12" }}
+        />
+      </a>
+
+      <!-- linkedin -->
+      <a
+        href="https://www.linkedin.com/company/neaxis-mx/"
+        target="_blank"
+        class="flex flex-col"
+      >
+        <Picture
+          src={linkedin}
+          formats={["avif", "webp"]}
+          alt="Linkedin"
+          pictureAttributes={{ class: "max-w-12" }}
+        />
+      </a>
+
+      <!-- instagram -->
+      <a
+        href="https://www.instagram.com/neaxis.mx/"
+        target="_blank"
+        class="flex flex-col"
+      >
+        <Picture
+          src={instagram}
+          formats={["avif", "webp"]}
+          alt="Instagram"
+          pictureAttributes={{ class: "max-w-12" }}
+        />
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import "../styles.css";
+import Head from "./Head.astro";
+import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "GouGo AI",
+  description = "Obtén respuestas instantáneas, encuentra, aprende sobre la data más confiable: tus propios datos operativos.",
+} = Astro.props;
+---
+
+<html lang="es">
+  <Head title={title} description={description} />
+  <body class="font-[poppins] antialiased">
+    <div class="flex flex-col">
+      <Navbar />
+
+      <main>
+        <slot />
+      </main>
+
+      <Footer />
+    </div>
+  </body>
+</html>
